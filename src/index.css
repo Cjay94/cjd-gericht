@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+} */
+
+/* START: General styles */
+
+/* Custom CSS to hide the scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: Hide scrollbar in Firefox */
+.hide-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+}
+
+/* Optional: Hide scrollbar in IE/Edge */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.section__padding {
+  @apply py-16 px-8 md:p-16 lg:px-24;
+}
+
+.flex__center {
+  @apply flex justify-center items-center;
+}
+
+.app__bg {
+  @apply bg-resturantbg bg-center bg-cover bg-repeat bg-fixed;
+}
+
+.app__wrapper {
+  @apply flex flex-col lg:flex-row justify-between items-center min-h-screen;
+}
+
+.app__wrapper_info {
+  @apply flex flex-1 w-full justify-center items-start flex-col;
+}
+
+.app__wrapper_img {
+  @apply flex flex-1 justify-center items-center ml-8 w-full lg:mt-20 lg:ml-0;
+}
+
+.app__wrapper_img-reverse {
+  @apply justify-start mr-8 lg:mb-20 lg:mr-0;
+}
+
+.app__wrapper_img img {
+  @apply w-4/5 lg:w-full;
+}
+
+.custom__button {
+  @apply bg-ccrimson text-cblack font-cormorant font-bold tracking-wider 
+  py-2 px-6 rounded-sm border-none outline-none cursor-pointer mb-8 mx-auto lg:m-0;
+}
+
+.p__cormorant {
+  @apply font-cormorant text-cwhite font-bold tracking-wider capitalize text-xl md:text-2xl lg:text-4xl;
+}
+
+.p__opensans {
+  @apply font-opensans text-cwhite font-normal tracking-wider capitalize text-sm md:text-base xl:text-xl;
+}
+
+.headtext__cormorant {
+  @apply font-cormorant text-cgolden tracking-wider capitalize;
+}
+
+.spoon__img {
+  @apply w-11 2xl:w-20;
+}
+/* END: General styles */
+
+/* END: Navbar styles */
+
+.app__navbar {
+  @apply w-full flex justify-between items-center bg-black p-4 md:py-4 md:px-8;
+}
+.app__navbar-logo {
+  @apply flex justify-start items-center;
+}
+.app__navbar-logo img {
+  @apply w-[110px] md:w-[150px] 2xl:w-[210px];
+}
+.app__navbar-links {
+  @apply flex__center list-none;
+}
+.app__navbar-links li {
+  @apply my-0 mx-4 cursor-pointer;
+}
+.app__navbar-links li:hover {
+  @apply text-cgrey;
+}
+
+.app__navbar-login {
+  @apply flex justify-end items-center;
+}
+.app__navbar-login a {
+  @apply my-0 mx-4 transition-all duration-500 ease-in-out;
+}
+.app__navbar-login a:hover {
+  @apply border-b-cgolden;
+}
+.app__navbar-login div {
+  @apply w-px h-[30px] bg-cgolden;
+}
+.app__navbar-smallscreen {
+  @apply lg:hidden;
+}
+.app__navbar-smallscreen_overlay {
+  @apply fixed top-0 left-0 w-full h-screen bg-cblack transition-all duration-500 ease-in-out flex-col z-50;
+}
+.overlay__close {
+  @apply text-[27px] text-cgolden cursor-pointer absolute top-5 right-5;
+}
+.app__navbar-smallscreen_links {
+  @apply list-none;
+}
+.app__navbar-smallscreen_links li {
+  @apply m-8 cursor-pointer text-cgolden text-[2rem] text-center font-cormorant;
+}
+.app__navbar-smallscreen_links li:hover {
+  @apply text-ccrimson;
+}
